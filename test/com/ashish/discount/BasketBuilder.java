@@ -15,7 +15,11 @@ public class BasketBuilder {
 	}
 
 	public BasketBuilder w(String name, double price) {
-		items.add(new Item(name, 1, price));
+		return w(name, 1, price);
+	}
+	
+	public BasketBuilder w(String name, int qty, double price) {
+		items.add(new Item(name, qty, price));
 		return this;
 	}
 
