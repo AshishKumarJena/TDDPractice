@@ -1,14 +1,17 @@
 package com.ashish.discount;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class Basket {
 	
 	private double amount;
 	private List<Item> items;
+	private Calendar date;
 
-	public Basket(List<Item> itemss) {
-		this.items = itemss;
+	public Basket(List<Item> items, Calendar date) {
+		this.items = items;
+		this.date = date;
 		sumItems();
 	}
 	
